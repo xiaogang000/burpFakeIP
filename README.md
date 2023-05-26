@@ -2,6 +2,12 @@
 
 下载使用：[Releases](https://github.com/TheKingOfDuck/burpFakeIP/releases/tag/1.0)
 
+**2023/05/26**
+1. 新增给每个请求自动修改随机UA头的功能，具体可见右键菜单AutoUA,默认情况下自动添加配置中随机的一个UA头。
+2. 修改AutoXFF，优先判断请求包是否存在定义的XFF，如果存在则替换，不存在则添加。
+3. 修改前三个功能逻辑，每次使用会自动替换XFF的IP，不需要手动删除。
+
+
 **2021/09/24**
 
 1. 修复[M00nBack](https://github.com/M00nBack)反馈的一个bug。

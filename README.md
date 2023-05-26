@@ -1,6 +1,4 @@
-## burpFakeIP
-
-下载使用：[Releases](https://github.com/TheKingOfDuck/burpFakeIP/releases/tag/1.0)
+## burpFakeIP修改版
 
 **2023/05/26**
 1. 新增给每个请求自动修改随机UA头的功能，具体可见右键菜单AutoUA,默认情况下自动添加配置中随机的一个UA头。

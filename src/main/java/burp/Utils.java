@@ -18,7 +18,7 @@ public class Utils {
         IHttpRequestResponse currentRequest = iContextMenuInvocation.getSelectedMessages()[0];
         IRequestInfo requestInfo = BurpExtender.helpers.analyzeRequest(currentRequest);
         List<String> headers = requestInfo.getHeaders();
-        List<String> headers2 = requestInfo.getHeaders();
+        List<String> headers2 = new ArrayList<String>(headers);
 
         //删除header中XFF字段
         List<String> templist = Config.HEADER_LIST;
@@ -48,7 +48,7 @@ public class Utils {
         //获取原请求信息
         IRequestInfo requestInfo = BurpExtender.helpers.analyzeRequest(iHttpRequestResponse);
         List<String> headers = requestInfo.getHeaders();
-        List<String> headers2 = requestInfo.getHeaders();
+        List<String> headers2 = new ArrayList<String>(headers);
 
         //替换header中XFF字段
         int aaa = 0;
@@ -77,8 +77,8 @@ public class Utils {
         //获取原请求信息
         IRequestInfo requestInfo = BurpExtender.helpers.analyzeRequest(iHttpRequestResponse);
         List<String> headers = requestInfo.getHeaders();
-        List<String> headers2 = requestInfo.getHeaders();
-
+        List<String> headers2 = new ArrayList<String>(headers);
+        
         //替换header中UA字段
         int aaa = 0;
         for (String header : headers2) {

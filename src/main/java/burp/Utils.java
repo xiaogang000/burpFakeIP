@@ -52,12 +52,17 @@ public class Utils {
 
         //替换header中XFF字段
         int aaa = 0;
+        int bbb = 0;
         for (String header : headers2) {
             String hkey = header.split(":")[0];
             if (hkey.equals(Config.AUTOXFF_KEY)) {
                 headers.set(aaa, String.format("%s: %s", Config.AUTOXFF_KEY, ip));
+                bbb = bbb+1;
             }
             aaa += 1;
+        }
+        if(bbb == 0){
+            headers.add(String.format("%s: %s", Config.AUTOXFF_KEY, ip));
         }
 
         //更新header
